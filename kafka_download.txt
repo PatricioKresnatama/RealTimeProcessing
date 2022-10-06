@@ -1,0 +1,8 @@
+[INSTAL KAFKA UBUNTU]
+wget https://dlcdn.apache.org/kafka/3.2.3/kafka_2.13-3.2.3.tgz
+tar -xvf kafka_2.13-3.2.3.tgz
+mv /kafka_2.13-3.2.3.tgz /home/rahmat/kafka
+cd kafka
+bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/kafka-server-start.sh config/server.properties
+bin/kafka-topics.sh --create --topic digitalskola --bootstrap-server localhost:9092
